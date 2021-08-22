@@ -3,7 +3,7 @@ import './Students.css';
 
 function Students() {
 
-	const [students, setStudents] = useState([
+	const [students] = useState([
 		'Joshua Miller',
 		'Marc Feldman',
 		'Ariana Grande',
@@ -15,7 +15,9 @@ function Students() {
 			<h3>Students:</h3>
 			<p>Display a bullet point list of all the `students` in the state.</p>
 			<ul>
-
+				{students.map((student, index) => (
+					<li key={index}>{student}</li>
+				))}
 			</ul>
 		</div>
 	)
